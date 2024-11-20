@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-
+import { Home } from './ScreenComponents/Home'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { FormPostTask } from './ScreenComponents/FormPostTask'
 
 function App() {
   
@@ -9,7 +11,12 @@ function App() {
 
   return (
     <>
-      <h1>The Url env var: {url}</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path={"/"} element={ <Home /> } />
+          <Route path={"/createTask"} element={ <FormPostTask /> } />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
