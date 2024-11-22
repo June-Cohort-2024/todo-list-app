@@ -5,6 +5,7 @@ import { Home } from './ScreenComponents/Home'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { FormPostTask } from './ScreenComponents/FormPostTask'
 
+
 function App() {
   
   let url = import.meta.env.VITE_URL
@@ -13,7 +14,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path={"/"} element={ <Home /> } />
+          <Route path='/' element={<Home/>} />
           <Route path={"/createTask"} element={ <FormPostTask /> } />
         </Routes>
       </BrowserRouter>

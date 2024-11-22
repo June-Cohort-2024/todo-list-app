@@ -26,7 +26,7 @@ export const FormPostTask = () => {
         })
 
         if(response.ok){
-            console.log("Object Created")
+            window.location = "/createTask"
         }
         
 
